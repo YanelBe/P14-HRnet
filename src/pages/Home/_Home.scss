@@ -1,0 +1,75 @@
+.home-title {
+    color: #828a64;
+}
+
+h1 {
+    margin: 45px 0px;
+    color: $primary-color;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: $tertiary-color;
+}
+
+label {
+    display: block;
+    margin-top: 1rem;
+    margin-bottom: 10px;
+}
+
+.address {
+    background-color: $tertiary-color;
+    border-radius: 5px;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.first-span {
+    display: block;
+    background-color: #fff9;
+    height: 22px;
+    width: 46px;
+    position: absolute;
+
+}
+
+.employee-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    background-color: white;
+    padding: 50px;
+    margin-bottom: 100px;
+    border: solid 3px $secondary-color;
+    border-radius: 10px;
+}
+
+
+
+.save-container {
+    display: flex;
+    justify-content: center;
+}
+
+.save-button {
+    border: none;
+    background-color: $primary-color;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+.save-button:hover {
+    color: $primary-color;
+    background-color: $secondary-color;
+}
+

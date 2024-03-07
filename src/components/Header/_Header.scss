@@ -1,0 +1,26 @@
+.header-container {
+    display: flex;
+    align-items: center;
+    padding: 30px 50px;
+    justify-content: space-between;
+    background-color: $primary-color;
+}
+
+.logo-title {
+    margin: 0px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.nav-right {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-link {
+    text-decoration: none;
+    color: white;
+    margin-left: 30px;
+    font-weight: bold;
+}
