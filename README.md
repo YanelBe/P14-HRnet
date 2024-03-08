@@ -14,6 +14,7 @@ Plusieurs étapes ont du être suivies :
 
 - Ajout d'un système de gestion d'état (Redux)
 
+- Création d'un rapport de performance Lighthouse pour comparer l'application jQuery à celle en React
 
 ## Prérequis
 
