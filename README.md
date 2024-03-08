@@ -1,70 +1,42 @@
-# Getting Started with Create React App
+# HRnet, migration jQuery vers React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+HRnet est une application jQuery qui rencontrait de nombreux problème de performance. Le but de ce projet a été de migrer le code jQuery en une application React.
 
-## Available Scripts
+L'application jQuery utilisait 4 plugins : un sélecteur de date, un menu dropdown, une modale et un tableau pour afficher les employés.
+J'ai converti le plugin du menu dropdown en un composant React que j'ai publié sur npm. 
+Plusieurs étapes ont du être suivies :
 
-In the project directory, you can run:
+- Convertir l'application complète HRnet, passange de jQuery à React
 
-### `npm start`
+- Conversion d'un des 4 plugins jQuery en composant React
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Utilisation de librairies existantes pour les plugins restants
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Ajout d'un système de gestion d'état (Redux)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Prérequis
 
-### `npm run build`
+- [NodeJS (**Version 14 ou supérieure**)](https://nodejs.org/en/)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- [NPM](https://www.npmjs.com/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- Visual Studio Code de préférence
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Installation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Cloner ce repo. Vous pouvez utiliser la commande `git clone https://github.com/YanelBe/P14-HRnet`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+2. Installer les dépendences avec la commande `npm install`
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Démarrez le serveur avec la commande `npm start`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. Le serveur démarre automatiquement sur le port 3000 par défaut.
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Liens
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Déploiement avec Netlify](https://hrnet-yanbe.netlify.app/) 
+- [Composant Dropdown sur Github](https://github.com/YanelBe/P14-HRnet-Dropdown)
+- [Composant Dropdown sur npm](https://www.npmjs.com/package/@yanbe/hrnet-dropdown) 

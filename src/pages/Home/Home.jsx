@@ -6,7 +6,8 @@ import { addEmployee } from "../../redux/employeeSlice";
 import Header from "../../components/Header/Header";
 import Input from "../../components/Input/Input";
 import CustomDatePicker from "../../components/CustomDatePicker/CustomDatePicker";
-import Dropdown from "../../components/Dropdown/Dropdown";
+// import Dropdown from "../../components/Dropdown/Dropdown";
+import Dropdown from "@yanbe/hrnet-dropdown"; // Import du composant directement depuis npm
 import Modal from "../../components/Modal/Modal";
 
 import optionsData from "../../data/dropdownData.json";
