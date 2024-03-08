@@ -1,10 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
+import employeesData from "../data/employeesData.json";
 
 // Création d'une slice Redux pour gérer les employés
 export const employeeSlice = createSlice({
   name: "employee",
   initialState: {
-    employees: [], // Le tableau initial des employés est vide  
+    employees: employeesData, // Le tableau initial des employés
   },
   reducers: {
     addEmployee: (state, action) => {

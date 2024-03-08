@@ -10,7 +10,7 @@ import DataTableExtensions from "react-data-table-component-extensions";
  * @returns {JSX.Element} - L'élément Form.
  */
 export default function Form() {
-    //Accès aux employés via Redux
+    // Accès aux employés via Redux
     const employees = useSelector((state) => state.employee.employees); 
     // console.log(employees);
 
