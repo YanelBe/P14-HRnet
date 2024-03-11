@@ -10,10 +10,11 @@ import "react-datepicker/dist/react-datepicker.css";
  * @param {string} props.id - L'identifiant unique
  * @param {Date} props.selected - La date sélectionnée
  * @param {Date} props.maxDate - La date maximale sélectionnable
+ * @param {string} props.errorMessage - Le message d'erreur à afficher si besoin
  * @param {function} props.onChange - La fonction de rappel appelée lorsqu'une nouvelle date est sélectionnée
  * @returns {JSX.Element} Composant JSX retourné
  */
-export default function CustomDatePicker({ label, id, selected, maxDate, onChange }) {
+export default function CustomDatePicker({ label, id, selected, maxDate, errorMessage, onChange }) {
     /**
      * Etat pour suivre si le sélecteur de date a le focus ou non
      * @type {[boolean, function]} Array contenant une valeur booléenne et une fonction pour mettre à jour la valeur
@@ -36,6 +37,7 @@ export default function CustomDatePicker({ label, id, selected, maxDate, onChang
                 className={`form-input ${isFocused ? "focused" : ""}`}
                 wrapperClassName="datePicker"
             />
+            <div className={`error ${errorMessage ? "error-visible" : ""}`}>{errorMessage || ""}</div>
         </div>
     );
 }
@@ -43,7 +45,8 @@ export default function CustomDatePicker({ label, id, selected, maxDate, onChang
 CustomDatePicker.propTypes = {
     label: PropTypes.string,
     id: PropTypes.string.isRequired,
-    selected: PropTypes.instanceOf(Date).isRequired,
+    selected: PropTypes.instanceOf(Date),
     maxDate: PropTypes.instanceOf(Date),
+    errorMessage: PropTypes.string,
     onChange: PropTypes.func.isRequired
 };

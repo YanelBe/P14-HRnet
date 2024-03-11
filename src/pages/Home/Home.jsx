@@ -84,7 +84,10 @@ export default function Home() {
      * @param {string | Date} value - La nouvelle valeur du champ (ou la Date s'il s'agissait du champ des dates)
      */
     const handleInputChange = (field, value) => {
-        setFormData(prev => ({ ...prev, [field]: value instanceof Date ? value : capitalizeWords(value) }));
+        setFormData(prev => ({
+            ...prev,
+            [field]: value instanceof Date || value == null ? value : capitalizeWords(value)
+        }));
     };
 
     
@@ -179,12 +182,14 @@ export default function Home() {
                             id="date-of-birth"
                             selected={formData.dateOfBirth}
                             onChange={date => handleInputChange("dateOfBirth", date)}
+                            errorMessage={errors.dateOfBirth}
                         />
                         <CustomDatePicker
                             label="Start Date"
                             id="start-date"
                             selected={formData.startDate}
                             onChange={date => handleInputChange("startDate", date)}
+                            errorMessage={errors.startDate}
                         />
                     </div>
                     <fieldset className="address">
